@@ -3,7 +3,7 @@
 This project is my experimental playground of [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/docs/introduction/).
 
 This project is part of my journey to learn React and Angular 2, 
-and it also has a sibling-project which implement the same thing exactly atAngular 2.
+and it also has a [sibling](https://github.com/OmriKaduri/Angular2-tictac) project which implement the same thing exactly atAngular 2.
 
 Currently, it only implements the classic tic-tac-toe game,
 without any implementation of algorithm for "Play against the computer" mode.
