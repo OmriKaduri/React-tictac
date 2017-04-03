@@ -1,0 +1,18 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_historyReducer = require('./historyReducer');
+var /* istanbul ignore next */_lodash = require('lodash'); /* istanbul ignore next */var _ = _interopRequireWildcard(_lodash); /* istanbul ignore next */function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+it('Should add squares and update xIsNext and counter', function () {
+	var state = {
+		history: [{
+			squares: Array(Math.pow(3, 2)).fill(null) }],
+
+		xIsNext: true,
+		current: 0 };
+
+	var squaresToAdd = _.cloneDeep(state.history[0].squares);
+	squaresToAdd[0] = 'X';
+	var nextState = /* istanbul ignore next */(0, _historyReducer.addHistoryReducer)(state, { type: 'ADD_HISTORY_REDUCER', squares: squaresToAdd, counter: 0, xIsNext: true });
+	expect(nextState.history[1].squares[0]).toEqual('X');
+	expect(nextState.xIsNext).toEqual(false);
+	expect(nextState.current).toEqual(1);
+});

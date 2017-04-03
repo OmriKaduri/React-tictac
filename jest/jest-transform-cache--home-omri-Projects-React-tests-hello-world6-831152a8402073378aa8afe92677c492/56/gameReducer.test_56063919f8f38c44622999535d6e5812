@@ -1,0 +1,9 @@
+/* istanbul ignore next */'use strict';var /* istanbul ignore next */_gameReducer = require('./gameReducer');
+
+it('Should set side length propery to 4', function () {
+	var state = {
+		sideLength: 3 };
+
+	var nextState = /* istanbul ignore next */(0, _gameReducer.gameReducer)(state, { type: 'SET_SIDE_LENGTH', sideLength: 4 });
+	expect(nextState.sideLength).toEqual(4);
+});

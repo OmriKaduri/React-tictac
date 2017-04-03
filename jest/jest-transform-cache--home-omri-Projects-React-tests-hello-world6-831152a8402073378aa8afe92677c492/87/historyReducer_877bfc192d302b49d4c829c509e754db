@@ -1,0 +1,10 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.addHistoryReducer = undefined;var /* istanbul ignore next */_lodash = require('lodash'); /* istanbul ignore next */var _ = _interopRequireWildcard(_lodash); /* istanbul ignore next */function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _toConsumableArray(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;} else {return Array.from(arr);}}
+
+var addHistoryReducer = /* istanbul ignore next */exports.addHistoryReducer = function addHistoryReducer(state, action) {
+	var newState = _.cloneDeep(state);
+	newState.history = /* istanbul ignore next */[].concat(_toConsumableArray(state.history), [{ 'squares': action.squares }]);
+	console.log();
+	++newState.current;
+	newState.xIsNext = !newState.xIsNext;
+	return newState;
+};

@@ -1,0 +1,41 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/home/omri/Projects/React-tests/hello-world6/src/components/Board.js';var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+/* istanbul ignore next */require('./Board.css');
+var /* istanbul ignore next */_Square = require('./Square'); /* istanbul ignore next */var _Square2 = _interopRequireDefault(_Square);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+Board = function (_Component) {_inherits(Board, _Component);function Board() {_classCallCheck(this, Board);return _possibleConstructorReturn(this, (Board.__proto__ || Object.getPrototypeOf(Board)).apply(this, arguments));}_createClass(Board, [{ key: 'createRow', value: function createRow(
+
+    rowNum, squares) {/* istanbul ignore next */var _this2 = this;
+      var sizeLength = Math.sqrt(squares.length);
+      var row = new Array(sizeLength).fill(); /* istanbul ignore next */var _loop = function _loop(
+      element) {
+        var squareIndex = parseInt(element) + rowNum * sizeLength;
+        row[element] = /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Square2.default, /* istanbul ignore next */{ value: squares[squareIndex], onClick: function /* istanbul ignore next */onClick() /* istanbul ignore next */{return (/* istanbul ignore next */_this2.props.onClick(squareIndex));}, __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: _this2 });};for (var element in row) {/* istanbul ignore next */_loop(element);
+      }
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'board-row', __source: { fileName: _jsxFileName, lineNumber: 14 }, __self: this },
+          row));
+
+
+    } }, { key: 'createBoard', value: function createBoard(
+
+    squares) {
+      var cols = Math.sqrt(squares.length); // cols == rows beqause it is a square
+      var table = new Array(cols);
+      for (var row = 0; row < cols; row++) {
+        table[row] = new Array(cols);
+        table[row] = this.createRow(row, squares);
+      }
+      return (
+        table);
+
+    } }, { key: 'render', value: function render()
+
+    {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'Board', __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
+          this.createBoard(this.props.squares)));
+
+
+    } }]);return Board;}(_react.Component); /* istanbul ignore next */exports.default =
+
+
+Board;

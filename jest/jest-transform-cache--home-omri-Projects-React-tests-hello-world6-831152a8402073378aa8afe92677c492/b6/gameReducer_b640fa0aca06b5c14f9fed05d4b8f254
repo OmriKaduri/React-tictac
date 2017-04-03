@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.gameReducer = exports.initialState = undefined;var /* istanbul ignore next */_lodash = require('lodash'); /* istanbul ignore next */var _ = _interopRequireWildcard(_lodash); /* istanbul ignore next */function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+var initialState = /* istanbul ignore next */exports.initialState = {
+	sideLength: 3 };
+
+
+var gameReducer = /* istanbul ignore next */exports.gameReducer = function gameReducer(state, action) {
+	switch (action.type) {
+		case 'SET_SIDE_LENGTH':
+			var newState = _.cloneDeep(state);
+			newState.sideLength = action.sideLength;
+		default:
+			return state;}
+
+};

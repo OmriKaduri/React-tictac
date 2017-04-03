@@ -1,0 +1,14 @@
+.game{
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+
+.status{
+	margin-left:20px;
+}
+
+.sideLengthInput{
+	float:left;
+	margin-right:15px;
+}

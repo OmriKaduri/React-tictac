@@ -1,0 +1,8 @@
+/* istanbul ignore next */'use strict';var _jsxFileName = '/home/omri/Projects/React-tests/hello-world6/src/components/Board.test.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactDom = require('react-dom'); /* istanbul ignore next */var _reactDom2 = _interopRequireDefault(_reactDom);
+var /* istanbul ignore next */_Board = require('./Board'); /* istanbul ignore next */var _Board2 = _interopRequireDefault(_Board);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+it('renders without crashing', function () {
+  var div = document.createElement('div');
+  /* istanbul ignore next */_reactDom2.default.render( /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Board2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 7 }, __self: undefined }), div);
+});
