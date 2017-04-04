@@ -4,12 +4,16 @@ node_js:
 
 before_script:
  - npm install -g react-scripts
-
+ - npm install -g serve
+ - 
 deploy:
   provider: heroku
   api_key:
     secure: "414d513b-8118-4a47-96b4-4e7a326ce88b"
   app: kaduri-react-tic
+  run: 
+    - "npm run build"
+    - "serve -s build -p 80"
   on:
     all_branches: true
   
