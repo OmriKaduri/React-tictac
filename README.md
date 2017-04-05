@@ -1,6 +1,6 @@
 # React + Redux implementation of tic-tac-toe game
 
-This project is my experimental playground of [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/docs/introduction/).
+This project is my experimental playground of [React](https://facebook.github.io/react/) and [Redux](http://redux.js.org/docs/introduction/). Demo is found [here](https://shielded-plateau-17212.herokuapp.com/#).
 
 This project is part of my journey to learn React and Angular 2, 
 and it also has a [sibling](https://github.com/OmriKaduri/Angular2-tictac) project which implements the same thing exactly at Angular 2.
